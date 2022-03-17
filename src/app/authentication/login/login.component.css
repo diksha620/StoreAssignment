@@ -1,0 +1,21 @@
+.container{
+    font-family: arial;
+    width: 20vw;
+    height: 35vh;
+    background-color:cadetblue; 
+   border-radius: 8px;
+   margin-top: 4vh;
+} 
+
+h1 {
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.mat-form-field{
+    margin-left: 4vw;
+}
+
+.mat-raised-button{
+    margin-left: 7vw;
+}

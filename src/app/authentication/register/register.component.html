@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>Signup Form</h1>
+    <form [formGroup] = "registerForm" (ngSubmit) = "onSubmit()">
+            
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your firstname</mat-label>
+            
+            <input matInput placeholder="diksha" formControlName="firstname">
+            <mat-error *ngIf="firstname && firstname.invalid && firstname.touched"> Firstname is required</mat-error>
+          </mat-form-field>
+            <br>
+            <br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your lastname</mat-label>
+            <input matInput placeholder="Khandelwal" formControlName="lastname">
+            <mat-error *ngIf="lastname && lastname.invalid && lastname.touched"> lastname is required</mat-error>
+          </mat-form-field>
+           <br>
+           <br>
+           
+            <mat-form-field appearance="fill">
+              <mat-label>Enter your email</mat-label>
+              <input matInput placeholder="pat@example.com" formControlName="email">
+              <mat-error *ngIf="email && email.invalid && email.touched"> Email is required</mat-error>
+            </mat-form-field>
+            <br>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input matInput placeholder="12345678" formControlName="password">
+                <mat-error *ngIf="password && password.invalid && password.touched"> password is required</mat-error>
+            </mat-form-field>
+            <br>
+            <br>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your confirm password</mat-label>
+                <input matInput placeholder="12345678" formControlName="cpassword">
+                <mat-error *ngIf="cpassword && cpassword.invalid && cpassword.touched">confirmpassword required</mat-error>
+            </mat-form-field>
+            <br>
+            <br>
+            <mat-error *ngIf="passwordnotMatch">Both password should be match</mat-error>
+            <br><br>
+            
+            <h4 style="text-align: center;">Already Registered - <span style = "color: red; cursor : pointer;"  routerLink = "/login">Login</span> </h4>
+            <br>
+            <button mat-raised-button color="primary" [disabled] = "registerForm.invalid"> Submit </button>
+    </form>
+</div>
